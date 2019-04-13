@@ -1,0 +1,39 @@
+.bottom{
+  display: flex;
+  flex-direction: column;
+}
+.image_content{
+  display: flex;
+  flex-direction: column;
+}
+.head_image{
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  width: auto;
+  background-color: #c0c6cf
+}
+.bottom_text_name{
+  text-align:left;
+  font-weight:normal;
+  font-size:18px;
+  padding-top: 40rpx;
+  padding-left: 20rpx;
+}
+.bottom_text_descr{
+  text-align:left;
+  font-weight:normal;
+  font-size:12px;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  color: #c0c6cf;
+}
+.bottom_text_price{
+  text-align:left;
+  font-weight:normal;
+  font-size:12px;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  color: #c0c6cf;
+}

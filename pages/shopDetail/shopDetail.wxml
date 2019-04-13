@@ -1,0 +1,22 @@
+<template name="shopDetail_bottom">
+  <view class="bottom">
+    <text class='bottom_text_name'>{{detailItem.name}}</text>
+    <text class='bottom_text_descr'>{{detailItem.descr}}</text>
+    <text class='bottom_text_price'>{{detailItem.detail}}</text>
+    <text class='bottom_text_price'>{{detailItem.price}}</text>
+    <block wx:if="{{detailItem.mobile.length > 0}}">
+        <text class='bottom_text_price' catchtap='mobile_tap' data-mobile="{{item.mobile}}" hover-stop-propagation='true'>详询:{{detailItem.mobile}}</text>
+      </block>
+  </view>
+</template>
+
+<scroll-view class="content">
+  <view class="image_content" wx:for="{{imageList}}">
+    <image class="head_image" mode="aspectFill" src="{{item}}"  bindtap="image_tap" data-urls="{{imageList}}">
+    </image>
+  </view>
+  <view>
+    <template is='shopDetail_bottom' data="{{detailItem}}">
+    </template>
+  </view>
+</scroll-view>

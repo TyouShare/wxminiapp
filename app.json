@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/shopList/shopList",
+    "pages/me/me",
+    "pages/shopDetail/shopDetail"
+  ],
+  "tabBar" : {
+    "color" : "#232323",
+    "selectedColor" : "#3492f2",
+    "list" : [
+               {"pagePath" : "pages/shopList/shopList",
+               "text" : "商品",
+               "iconPath" : "images/tabbar_shop.png",
+               "selectedIconPath" : "images/tabbar_shop_selected.png"
+               } ,
+               {
+                "pagePath": "pages/me/me",
+                "text": "关于",
+                "iconPath": "images/tabbar_me.png",
+                "selectedIconPath": "images/tabbar_me_selected.png"
+                }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
