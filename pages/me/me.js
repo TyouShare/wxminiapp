@@ -36,11 +36,13 @@ Page({
   },
 
   loadConfig: function () {
+    wx.showLoading();
     var that = this;
     wx.request({
       url: "https://raw.githubusercontent.com/TyouShare/mallConfig/master/me.json",
       success(result) {
         var meData = result.data;
+        console.log(meData);
         if (meData) {
           if (that.data.hasData == false) {
             that.setData({
@@ -58,9 +60,11 @@ Page({
             data: encodeData,
           })
         }
+        wx.hideLoading();
       },
       fail(result) {
         console.log(result)
+        wx.hideLoading();
       }
     })
   },

@@ -21,13 +21,14 @@ Page({
   },
 
   loadConfig: function() {
+    wx.showLoading();
     var that = this;
     wx.request({
       url: "https://raw.githubusercontent.com/TyouShare/mallConfig/master/list_config.json",
       success(result) {
         if (result.data) {
+          console.log(result.data);
           if (that.data.item.length == 0){
-            console.log(result.data);
             that.setData({
               item: result.data
             })
@@ -39,9 +40,11 @@ Page({
             data: encodeData,
           })
         }
+        wx.hideLoading();
       },
       fail(result) {
         console.log(result)
+        wx.hideLoading();
       }
     })
   },

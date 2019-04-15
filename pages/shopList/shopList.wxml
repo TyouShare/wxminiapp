@@ -10,6 +10,7 @@
         <text class='cell_text_price' catchtap='mobile_tap' data-mobile="{{item.mobile}}" hover-stop-propagation='true'>详询:{{item.mobile}}</text>
       </block>
     </view>
+    <view class='cell_line'></view>
   </view>
 </template>
 

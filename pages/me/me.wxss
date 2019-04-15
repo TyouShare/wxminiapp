@@ -14,18 +14,19 @@
 .descr {
   text-align: left;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 16px;
   padding-top: 30rpx;
   padding-bottom: 30rpx;
   padding-left: 20rpx;
   color: #c0c6cf;
+  padding-right: 120rpx;
 }
 
 .button {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 15px;
   color: #abafb6;
-  background-color: #f9fafc;
+  background-color: #ffffff;
 }
 
 .image {
