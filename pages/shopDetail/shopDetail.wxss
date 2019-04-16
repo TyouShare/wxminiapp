@@ -8,10 +8,7 @@
 }
 .head_image{
   margin-top: 20rpx;
-  margin-right: 20rpx;
-  margin-left: 20rpx;
-  margin-bottom: 20rpx;
-  width: auto;
+  width: 100%;
   background-color: #c0c6cf
 }
 .bottom_text_name{

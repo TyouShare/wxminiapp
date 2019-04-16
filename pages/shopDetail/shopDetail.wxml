@@ -14,7 +14,7 @@
 
 <scroll-view class="content">
   <view class="image_content" wx:for="{{imageList}}">
-    <image class="head_image" mode="aspectFill" src="{{item}}"  bindtap="image_tap" data-urls="{{imageList}}">
+    <image class="head_image" mode="widthFix" src="{{item}}"  bindtap="image_tap" data-urls="{{imageList}}">
     </image>
   </view>
   <view>
