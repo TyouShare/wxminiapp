@@ -1,28 +1,16 @@
-// 物品列表页面
-const network = require('../../utils/network.js')
+// 收藏列表页面
 Page({
   data: {
     item: []
   },
 
-  onLoad: function(options) {
+  onShow: function (options) {
     //
-    var that = this;
-    var success = function(result) {
-      console.log(result);
-      that.setData({
-        item: result
-      });
-      that.reloadItem();
-    }
-    var fail = function(result) {
-      console.log('加载失败');
-    }
-    network.requestListData(success, fail)
-  },
-
-  onShow: function (options){
-    this.reloadItem();
+    const appInstance = getApp();
+    var favouriteList = appInstance.globalData.favouriteList;
+    this.setData({
+      item:favouriteList
+    })
   },
 
   // cell 点击事件
@@ -34,14 +22,14 @@ Page({
     })
   },
 
-  mobile_tap: function(arg) {
+  mobile_tap: function (arg) {
     //
     var mobile = arg.currentTarget.dataset.mobile;
     const connect = require('../../utils/connect.js')
     connect.alert(mobile)
   },
 
-  favourite_tap: function(arg) {
+  favourite_tap: function (arg) {
     var item = arg.currentTarget.dataset.item;
     const appInstance = getApp();
     var favouriteList = appInstance.globalData.favouriteList;
@@ -61,31 +49,15 @@ Page({
       item.favourite = '../../images/tabbar_favourite_selected.png';
       favouriteList.push(item);
     }
-    this.reloadItem();
+
+    this.setData({
+item:favouriteList
+    });
+
     wx.setStorage({
       key: 'collection',
       data: favouriteList
     })
-  },
-
-  reloadItem:function(){
-    const appInstance = getApp();
-    var favouriteList = appInstance.globalData.favouriteList;
-    // 刷新页面
-    var oldItems = this.data.item;
-    for (var i = 0; i < oldItems.length; i++) {
-      var oldItem = oldItems[i]
-      oldItem.favourite = '../../images/tabbar_favourite.png';
-      for (var j = 0; j < favouriteList.length; j++) {
-        let favouriteItem = favouriteList[j]
-        if (favouriteItem.name == oldItem.name) {
-          oldItem.favourite = '../../images/tabbar_favourite_selected.png';
-          continue;
-        }
-      }
-    }
-    this.setData({
-      item: oldItems
-    });
   }
+
 })

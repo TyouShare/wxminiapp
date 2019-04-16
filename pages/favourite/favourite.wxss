@@ -1,19 +1,19 @@
 .cell_content{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .cell_content_left{
   display: flex;
   flex-direction: column;
   padding-bottom: 20rpx;
 }
-.cell_image{
-  margin-top: 20rpx;
-  margin-right: 20rpx;
-  margin-left: 20rpx;
-  margin-bottom: 20rpx;
-  width: auto;
-  background-color: #c0c6cf
+.cell_image_view{
+  display: flex;
+  width: 40%;
+  padding-top: 20rpx;
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
 }
 .cell_text_name{
   text-align:left;
@@ -21,6 +21,7 @@
   font-size:18px;
   padding-top: 40rpx;
   padding-left: 20rpx;
+  padding-right: 20rpx
 }
 .cell_text_descr{
   text-align:left;
@@ -28,6 +29,7 @@
   font-size:14px;
   padding-top: 10rpx;
   padding-left: 20rpx;
+  padding-right: 20rpx;
   color: #aab1bd;
 }
 .cell_text_price{
@@ -48,4 +50,5 @@
   width: 44rpx;
   height: 44rpx;
   margin-bottom: 20rpx;
+  margin-top: 20rpx;
 }

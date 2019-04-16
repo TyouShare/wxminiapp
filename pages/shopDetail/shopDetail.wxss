@@ -24,16 +24,23 @@
 .bottom_text_descr{
   text-align:left;
   font-weight:normal;
-  font-size:12px;
+  font-size:14px;
   padding-top: 10rpx;
   padding-left: 20rpx;
-  color: #c0c6cf;
+  color: #a7b3c5;
 }
 .bottom_text_price{
   text-align:left;
   font-weight:normal;
-  font-size:12px;
+  font-size:14px;
   padding-top: 10rpx;
   padding-left: 20rpx;
-  color: #c0c6cf;
+  color: #dd0e0e;
+}
+.cell_favourite_image{
+  margin-left: 20rpx;
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
 }

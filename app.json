@@ -2,7 +2,8 @@
   "pages":[
     "pages/shopList/shopList",
     "pages/me/me",
-    "pages/shopDetail/shopDetail"
+    "pages/shopDetail/shopDetail",
+    "pages/favourite/favourite"
   ],
   "tabBar" : {
     "color" : "#232323",
@@ -13,6 +14,12 @@
                "iconPath" : "images/tabbar_shop.png",
                "selectedIconPath" : "images/tabbar_shop_selected.png"
                } ,
+               {
+                "pagePath": "pages/favourite/favourite",
+                "text": "收藏",
+                "iconPath": "images/tabbar_favourite.png",
+                "selectedIconPath": "images/tabbar_shop_selected.png"
+              },
                {
                 "pagePath": "pages/me/me",
                 "text": "关于",

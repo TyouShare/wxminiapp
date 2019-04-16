@@ -1,7 +1,9 @@
-<template name="shopList_cell">
+<template name="favourite_cell">
   <view class='cell_content'>
-    <image class="cell_image" mode="aspectFill" src="{{item.imageUrl}}">
+    <view class='cell_image_view'>
+    <image mode="widthFix" src="{{item.imageUrl}}">
     </image>
+    </view>
     <view class="cell_content_left">
       <text class='cell_text_name'>{{item.name}}</text>
       <text class='cell_text_descr'>{{item.descr}}</text>
@@ -9,16 +11,16 @@
       <block wx:if="{{item.mobile.length > 0}}">
         <text class='cell_text_price' catchtap='mobile_tap' data-mobile="{{item.mobile}}" hover-stop-propagation='true'>详询:{{item.mobile}}</text>
       </block>
-    </view>
-    <image class="cell_favourite_image" mode="aspectFit" src="{{item.favourite.length > 0 ? item.favourite : '../../images/tabbar_favourite.png'}}" catchtap='favourite_tap' data-item="{{item}}" hover-stop-propagation='true'>
+      <image class="cell_favourite_image" mode="aspectFit" src="{{item.favourite.length > 0 ? item.favourite : '../../images/tabbar_favourite.png'}}" catchtap='favourite_tap' data-item="{{item}}" hover-stop-propagation='true'>
     </image>
-    <view class='cell_line'></view>
+    </view>
   </view>
+  <view class='cell_line'></view>
 </template>
 
 <scroll-view class="content" wx:for="{{item}}">
   <view bindtap="handelTap" data-item="{{item}}">
-    <template is='shopList_cell' data="{{item}}">
+    <template is='favourite_cell' data="{{item}}">
     </template>
   </view>
 </scroll-view>
