@@ -18,7 +18,7 @@
                 "pagePath": "pages/favourite/favourite",
                 "text": "收藏",
                 "iconPath": "images/tabbar_favourite.png",
-                "selectedIconPath": "images/tabbar_shop_selected.png"
+                "selectedIconPath": "images/tabbar_favourite_selected.png"
               },
                {
                 "pagePath": "pages/me/me",

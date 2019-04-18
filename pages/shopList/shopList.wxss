@@ -49,3 +49,18 @@
   height: 44rpx;
   margin-bottom: 20rpx;
 }
+.button_contact{
+  position: fixed;
+  height: 88rpx;
+  bottom: 60rpx;
+  right: 30rpx;
+  background-color: rgba(255, 255, 255, 0);
+}
+.button_contact::after{
+  border: 0rpx;
+}
+.image_contact{
+  width: 88rpx;
+  height: 88rpx;
+  z-index: 9999;
+}

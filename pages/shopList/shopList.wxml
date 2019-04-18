@@ -21,4 +21,7 @@
     <template is='shopList_cell' data="{{item}}">
     </template>
   </view>
+  <button class='button_contact' open-type='contact'>
+  <image class="image_contact" mode="aspectFit" src="../../images/service.jpg"></image>
+  </button>
 </scroll-view>
